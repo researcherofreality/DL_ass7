@@ -1,0 +1,131 @@
+start run
+start
+model performance {'train loss': 0.014202002583122389, 'train acc': 0.9953818181818181, 'val loss': 0.10532805931903422, 'val acc': 0.9774, 'test acc': 0.9794}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03864088026593355, 'train_acc': 0.9878, 'val_loss': 0.08413024531900883, 'val_acc': 0.9748, 'test_acc': 0.9766}
+model performance {'train loss': 0.010653135454963724, 'train acc': 0.9964, 'val loss': 0.11742609371487052, 'val acc': 0.9744, 'test acc': 0.9761}
+early stop model performance {'iteration': 8253, 'train_loss': 0.017691066436854783, 'train_acc': 0.9939818181818182, 'val_loss': 0.09221954251476563, 'val_acc': 0.9798, 'test_acc': 0.9783}
+model performance {'train loss': 0.014809299448962239, 'train acc': 0.9950363636363636, 'val loss': 0.10109229553565383, 'val acc': 0.9794, 'test acc': 0.9799}
+early stop model performance {'iteration': 4585, 'train_loss': 0.04015171705511483, 'train_acc': 0.9869272727272728, 'val_loss': 0.0875106652379036, 'val_acc': 0.9762, 'test_acc': 0.9766}
+model performance {'train loss': 0.0144124457125679, 'train acc': 0.9952, 'val loss': 0.11078770735412836, 'val acc': 0.9748, 'test acc': 0.9791}
+early stop model performance {'iteration': 2751, 'train_loss': 0.06650470042201606, 'train_acc': 0.9794, 'val_loss': 0.0935293683975935, 'val_acc': 0.9718, 'test_acc': 0.9765}
+model performance {'train loss': 0.011015317959617823, 'train acc': 0.9960545454545454, 'val loss': 0.11348234308678656, 'val acc': 0.9764, 'test acc': 0.9811}
+early stop model performance {'iteration': 2751, 'train_loss': 0.06914967392683029, 'train_acc': 0.9779636363636364, 'val_loss': 0.08739523021578789, 'val_acc': 0.974, 'test_acc': 0.975}
+model performance {'train loss': 0.008795481510555824, 'train acc': 0.9973636363636363, 'val loss': 0.13588997653229162, 'val acc': 0.977, 'test acc': 0.9788}
+early stop model performance {'iteration': 2751, 'train_loss': 0.07265918767235496, 'train_acc': 0.9773818181818181, 'val_loss': 0.08920839747190476, 'val_acc': 0.975, 'test_acc': 0.9748}
+model performance {'train loss': 0.004105481961498747, 'train acc': 0.9989090909090909, 'val loss': 0.21863681447889075, 'val acc': 0.9802, 'test acc': 0.9829}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03917305130430243, 'train_acc': 0.9872, 'val_loss': 0.08557202508896589, 'val_acc': 0.977, 'test_acc': 0.9796}
+model performance {'train loss': 0.005115459651108745, 'train acc': 0.9984727272727273, 'val loss': 0.20464298877183829, 'val acc': 0.9796, 'test acc': 0.9794}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03836301377490163, 'train_acc': 0.9872545454545455, 'val_loss': 0.08815677600055934, 'val_acc': 0.9746, 'test_acc': 0.9785}
+model performance {'train loss': 0.014066394364318429, 'train acc': 0.9954727272727273, 'val loss': 0.11036434144387022, 'val acc': 0.9758, 'test acc': 0.9783}
+early stop model performance {'iteration': 4585, 'train_loss': 0.039424888689545065, 'train_acc': 0.9871090909090909, 'val_loss': 0.08290407789349556, 'val_acc': 0.9766, 'test_acc': 0.9769}
+model performance {'train loss': 0.015892692246700806, 'train acc': 0.9944727272727273, 'val loss': 0.13535205348581075, 'val acc': 0.9698, 'test acc': 0.9783}
+early stop model performance {'iteration': 2751, 'train_loss': 0.07072569368400357, 'train_acc': 0.9774363636363637, 'val_loss': 0.09111229662299156, 'val_acc': 0.9736, 'test_acc': 0.9761}
+model performance {'train loss': 0.016254643210336903, 'train acc': 0.9944, 'val loss': 0.09978612404414453, 'val acc': 0.9782, 'test acc': 0.9803}
+early stop model performance {'iteration': 4585, 'train_loss': 0.0395646609544754, 'train_acc': 0.9875636363636363, 'val_loss': 0.083888421484828, 'val_acc': 0.9742, 'test_acc': 0.9798}
+model performance {'train loss': 0.016997320706727492, 'train acc': 0.994, 'val loss': 0.09378302914574742, 'val acc': 0.979, 'test acc': 0.9812}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03630552448596467, 'train_acc': 0.9884, 'val_loss': 0.07949228715971113, 'val_acc': 0.979, 'test_acc': 0.9792}
+model performance {'train loss': 0.012291943938170813, 'train acc': 0.9956727272727273, 'val loss': 0.11360523067060858, 'val acc': 0.9778, 'test acc': 0.9762}
+early stop model performance {'iteration': 8253, 'train_loss': 0.019585334188245575, 'train_acc': 0.9933454545454545, 'val_loss': 0.09049871275275946, 'val_acc': 0.9784, 'test_acc': 0.9769}
+model performance {'train loss': 0.009029794546525029, 'train acc': 0.997109090909091, 'val loss': 0.1750655249554664, 'val acc': 0.9736, 'test acc': 0.975}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03888604776209051, 'train_acc': 0.9875090909090909, 'val_loss': 0.0877203718572855, 'val_acc': 0.9732, 'test_acc': 0.9772}
+model performance {'train loss': 0.003811239849654505, 'train acc': 0.9986363636363637, 'val loss': 0.20782097046635462, 'val acc': 0.979, 'test acc': 0.9819}
+early stop model performance {'iteration': 4585, 'train_loss': 0.0375374010879885, 'train_acc': 0.9878, 'val_loss': 0.08935283319354058, 'val_acc': 0.9754, 'test_acc': 0.9788}
+model performance {'train loss': 0.003650105356060016, 'train acc': 0.9990363636363636, 'val loss': 0.18654868029771132, 'val acc': 0.9818, 'test acc': 0.9805}
+early stop model performance {'iteration': 6419, 'train_loss': 0.024535120322487572, 'train_acc': 0.9915454545454545, 'val_loss': 0.0930293805770576, 'val_acc': 0.975, 'test_acc': 0.9789}
+model performance {'train loss': 0.015622899692370133, 'train acc': 0.9944545454545455, 'val loss': 0.1082423269495368, 'val acc': 0.977, 'test acc': 0.9796}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03941218035844239, 'train_acc': 0.9872909090909091, 'val_loss': 0.09627671777009963, 'val_acc': 0.9742, 'test_acc': 0.9757}
+model performance {'train loss': 0.011664422332516617, 'train acc': 0.9960363636363636, 'val loss': 0.13068231159821153, 'val acc': 0.97, 'test acc': 0.9719}
+early stop model performance {'iteration': 8253, 'train_loss': 0.018097282990648157, 'train_acc': 0.9938727272727272, 'val_loss': 0.08717736522620544, 'val_acc': 0.9794, 'test_acc': 0.9815}
+model performance {'train loss': 0.014450796080867506, 'train acc': 0.9951636363636364, 'val loss': 0.12751608431134373, 'val acc': 0.9724, 'test acc': 0.9798}
+early stop model performance {'iteration': 6419, 'train_loss': 0.02453723556738008, 'train_acc': 0.9919272727272728, 'val_loss': 0.08835154335796833, 'val_acc': 0.9746, 'test_acc': 0.9782}
+model performance {'train loss': 0.013812627108995168, 'train acc': 0.9952909090909091, 'val loss': 0.11226014711838216, 'val acc': 0.973, 'test acc': 0.977}
+early stop model performance {'iteration': 4585, 'train_loss': 0.039499896550449456, 'train_acc': 0.9871636363636364, 'val_loss': 0.08467446986585855, 'val_acc': 0.9762, 'test_acc': 0.9772}
+model performance {'train loss': 0.013336923753952777, 'train acc': 0.9958363636363636, 'val loss': 0.12483938925731927, 'val acc': 0.972, 'test acc': 0.976}
+early stop model performance {'iteration': 6419, 'train_loss': 0.026340698287500578, 'train_acc': 0.9915454545454545, 'val_loss': 0.08107059747930616, 'val_acc': 0.979, 'test_acc': 0.9796}
+model performance {'train loss': 0.007002303584688442, 'train acc': 0.9976727272727273, 'val loss': 0.15601855977806262, 'val acc': 0.9762, 'test acc': 0.9799}
+early stop model performance {'iteration': 8253, 'train_loss': 0.017397495521054688, 'train_acc': 0.9944363636363637, 'val_loss': 0.09196582400146872, 'val_acc': 0.9798, 'test_acc': 0.9788}
+model performance {'train loss': 0.005234999463196725, 'train acc': 0.9988363636363636, 'val loss': 0.19044231294137462, 'val acc': 0.9798, 'test acc': 0.9816}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03792772410688075, 'train_acc': 0.9874545454545455, 'val_loss': 0.08731231406629085, 'val_acc': 0.977, 'test_acc': 0.9764}
+model performance {'train loss': 0.0057050058420293455, 'train acc': 0.9984727272727273, 'val loss': 0.18204511945844398, 'val acc': 0.9798, 'test acc': 0.9819}
+early stop model performance {'iteration': 6419, 'train_loss': 0.026407114539126104, 'train_acc': 0.9911454545454546, 'val_loss': 0.07953754672408105, 'val_acc': 0.9778, 'test_acc': 0.9787}
+model performance {'train loss': 0.015425943716789002, 'train acc': 0.9943818181818181, 'val loss': 0.12181041224449873, 'val acc': 0.9732, 'test acc': 0.9785}
+early stop model performance {'iteration': 8253, 'train_loss': 0.018256594231496143, 'train_acc': 0.993909090909091, 'val_loss': 0.0844808346413076, 'val_acc': 0.9786, 'test_acc': 0.9793}
+model performance {'train loss': 0.014211784323915544, 'train acc': 0.9955818181818182, 'val loss': 0.10947798809297382, 'val acc': 0.9778, 'test acc': 0.979}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03829055296551775, 'train_acc': 0.9873818181818181, 'val_loss': 0.0880695891238749, 'val_acc': 0.977, 'test_acc': 0.9784}
+model performance {'train loss': 0.009851446507786485, 'train acc': 0.9969272727272728, 'val loss': 0.11148469731211662, 'val acc': 0.9792, 'test acc': 0.9798}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03839154193171046, 'train_acc': 0.9873636363636363, 'val_loss': 0.08035631987303496, 'val_acc': 0.978, 'test_acc': 0.9782}
+model performance {'train loss': 0.011243364904892025, 'train acc': 0.9964909090909091, 'val loss': 0.13751429642150179, 'val acc': 0.9762, 'test acc': 0.979}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03946012883003462, 'train_acc': 0.9868727272727272, 'val_loss': 0.07888110149800777, 'val_acc': 0.979, 'test_acc': 0.9764}
+model performance {'train loss': 0.003936129713674383, 'train acc': 0.9987090909090909, 'val loss': 0.17267402811358626, 'val acc': 0.9806, 'test acc': 0.9812}
+early stop model performance {'iteration': 2751, 'train_loss': 0.06838529555038972, 'train_acc': 0.9778727272727272, 'val_loss': 0.09071227589845657, 'val_acc': 0.975, 'test_acc': 0.9747}
+model performance {'train loss': 0.004704237899275005, 'train acc': 0.998890909090909, 'val loss': 0.1617385975279228, 'val acc': 0.981, 'test acc': 0.9828}
+early stop model performance {'iteration': 8253, 'train_loss': 0.01925816071383147, 'train_acc': 0.9934545454545455, 'val_loss': 0.09315828609410673, 'val_acc': 0.9772, 'test_acc': 0.978}
+model performance {'train loss': 0.006737788575969774, 'train acc': 0.9983090909090909, 'val loss': 0.18468685252782652, 'val acc': 0.979, 'test acc': 0.9793}
+early stop model performance {'iteration': 8253, 'train_loss': 0.018777162821135823, 'train_acc': 0.9937818181818182, 'val_loss': 0.09086893685311079, 'val_acc': 0.9758, 'test_acc': 0.9789}
+model performance {'train loss': 0.002615200506140583, 'train acc': 0.9992181818181818, 'val loss': 0.19966892402657463, 'val acc': 0.9808, 'test acc': 0.9818}
+early stop model performance {'iteration': 8253, 'train_loss': 0.017209215864903208, 'train_acc': 0.9941636363636364, 'val_loss': 0.08659596619009971, 'val_acc': 0.9806, 'test_acc': 0.9814}
+model performance {'train loss': 0.016356630135261962, 'train acc': 0.9947636363636364, 'val loss': 0.11375111561752856, 'val acc': 0.9766, 'test acc': 0.9802}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03875883980721913, 'train_acc': 0.9873272727272727, 'val_loss': 0.07401939352676272, 'val_acc': 0.978, 'test_acc': 0.981}
+model performance {'train loss': 0.015440185785794164, 'train acc': 0.9946909090909091, 'val loss': 0.10740584025233985, 'val acc': 0.978, 'test acc': 0.9787}
+early stop model performance {'iteration': 4585, 'train_loss': 0.040331923112882806, 'train_acc': 0.9867454545454546, 'val_loss': 0.08276058158874512, 'val_acc': 0.9772, 'test_acc': 0.9802}
+model performance {'train loss': 0.009930061622945173, 'train acc': 0.9968181818181818, 'val loss': 0.1190537857182324, 'val acc': 0.9758, 'test acc': 0.9794}
+early stop model performance {'iteration': 8253, 'train_loss': 0.0195306232443164, 'train_acc': 0.9937636363636364, 'val_loss': 0.07562719529643655, 'val_acc': 0.9798, 'test_acc': 0.982}
+model performance {'train loss': 0.008349904189703144, 'train acc': 0.9972363636363636, 'val loss': 0.1326581041123951, 'val acc': 0.979, 'test acc': 0.9804}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03696711677472023, 'train_acc': 0.9885818181818182, 'val_loss': 0.08565797206312419, 'val_acc': 0.9772, 'test_acc': 0.9786}
+model performance {'train loss': 0.0030792842568676737, 'train acc': 0.999109090909091, 'val loss': 0.193515890281921, 'val acc': 0.9766, 'test acc': 0.9795}
+early stop model performance {'iteration': 2751, 'train_loss': 0.07029437689320607, 'train_acc': 0.9782363636363637, 'val_loss': 0.08813395130336285, 'val_acc': 0.9746, 'test_acc': 0.9757}
+model performance {'train loss': 0.006114679771495235, 'train acc': 0.9983272727272727, 'val loss': 0.21047931060742375, 'val acc': 0.981, 'test acc': 0.9821}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03816818285618316, 'train_acc': 0.9872727272727273, 'val_loss': 0.0845603050172329, 'val_acc': 0.9752, 'test_acc': 0.9754}
+model performance {'train loss': 0.0008371209485671477, 'train acc': 0.9997454545454545, 'val loss': 0.1724574471384011, 'val acc': 0.982, 'test acc': 0.9823}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03970227544002912, 'train_acc': 0.9870181818181818, 'val_loss': 0.0907596213042736, 'val_acc': 0.9744, 'test_acc': 0.979}
+model performance {'train loss': 0.004251656956702453, 'train acc': 0.9987636363636364, 'val loss': 0.16838427368342931, 'val acc': 0.9798, 'test acc': 0.9829}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03881376261176033, 'train_acc': 0.9876545454545455, 'val_loss': 0.09043408343046903, 'val_acc': 0.9746, 'test_acc': 0.9809}
+model performance {'train loss': 0.014138316756219137, 'train acc': 0.9952, 'val loss': 0.12651122841127216, 'val acc': 0.9752, 'test acc': 0.9754}
+early stop model performance {'iteration': 6419, 'train_loss': 0.023948709161122413, 'train_acc': 0.9920545454545454, 'val_loss': 0.08593169773947447, 'val_acc': 0.9776, 'test_acc': 0.9807}
+model performance {'train loss': 0.0151327840144492, 'train acc': 0.9946727272727273, 'val loss': 0.09722651465423406, 'val acc': 0.9798, 'test acc': 0.9793}
+early stop model performance {'iteration': 2751, 'train_loss': 0.070132675300674, 'train_acc': 0.9779636363636364, 'val_loss': 0.09002259088158608, 'val_acc': 0.972, 'test_acc': 0.9752}
+model performance {'train loss': 0.010291675395191388, 'train acc': 0.9967818181818182, 'val loss': 0.12831401042770593, 'val acc': 0.975, 'test acc': 0.9759}
+early stop model performance {'iteration': 4585, 'train_loss': 0.04123238285935738, 'train_acc': 0.9866545454545455, 'val_loss': 0.07979165239036083, 'val_acc': 0.9764, 'test_acc': 0.9783}
+model performance {'train loss': 0.007798088671928285, 'train acc': 0.9977272727272727, 'val loss': 0.14272291257031902, 'val acc': 0.9762, 'test acc': 0.9796}
+early stop model performance {'iteration': 4585, 'train_loss': 0.038989833439818836, 'train_acc': 0.9872727272727273, 'val_loss': 0.07767474506497384, 'val_acc': 0.9782, 'test_acc': 0.9791}
+model performance {'train loss': 0.0033566731419416456, 'train acc': 0.9989636363636364, 'val loss': 0.20231179018050244, 'val acc': 0.9774, 'test acc': 0.9814}
+early stop model performance {'iteration': 6419, 'train_loss': 0.02205412178493359, 'train_acc': 0.9927636363636364, 'val_loss': 0.09201661040633917, 'val_acc': 0.9752, 'test_acc': 0.9782}
+model performance {'train loss': 0.00562078362081684, 'train acc': 0.9986545454545455, 'val loss': 0.18193241161989773, 'val acc': 0.9814, 'test acc': 0.9813}
+early stop model performance {'iteration': 6419, 'train_loss': 0.02483897446366027, 'train_acc': 0.9915636363636363, 'val_loss': 0.09206256671100854, 'val_acc': 0.9768, 'test_acc': 0.9771}
+model performance {'train loss': 0.007068383097523991, 'train acc': 0.9982363636363636, 'val loss': 0.1706601107995615, 'val acc': 0.981, 'test acc': 0.9817}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03904731080803004, 'train_acc': 0.9871818181818182, 'val_loss': 0.08195212543457747, 'val_acc': 0.9782, 'test_acc': 0.9792}
+model performance {'train loss': 0.0013349360942321825, 'train acc': 0.9996727272727273, 'val loss': 0.21719258092649396, 'val acc': 0.978, 'test acc': 0.9789}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03975823326747526, 'train_acc': 0.9871636363636364, 'val_loss': 0.0859524932667613, 'val_acc': 0.9738, 'test_acc': 0.9779}
+model performance {'train loss': 0.015591709598443809, 'train acc': 0.9948363636363636, 'val loss': 0.11103818734418601, 'val acc': 0.975, 'test acc': 0.9797}
+early stop model performance {'iteration': 4585, 'train_loss': 0.04063815166821534, 'train_acc': 0.9863636363636363, 'val_loss': 0.08771738524734973, 'val_acc': 0.975, 'test_acc': 0.9807}
+model performance {'train loss': 0.014208661058293232, 'train acc': 0.9951818181818182, 'val loss': 0.08961171923279762, 'val acc': 0.9788, 'test acc': 0.9792}
+early stop model performance {'iteration': 6419, 'train_loss': 0.02250567387633703, 'train_acc': 0.9924545454545455, 'val_loss': 0.08052605668976903, 'val_acc': 0.979, 'test_acc': 0.9791}
+model performance {'train loss': 0.009445100303823116, 'train acc': 0.9966909090909091, 'val loss': 0.11727144915930694, 'val acc': 0.9774, 'test acc': 0.9801}
+early stop model performance {'iteration': 4585, 'train_loss': 0.039300176694989204, 'train_acc': 0.9875636363636363, 'val_loss': 0.08558714269697666, 'val_acc': 0.9748, 'test_acc': 0.9779}
+model performance {'train loss': 0.01330007586414292, 'train acc': 0.9960181818181818, 'val loss': 0.14319102258080965, 'val acc': 0.9746, 'test acc': 0.9789}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03719665030024268, 'train_acc': 0.9882363636363637, 'val_loss': 0.08608929176330567, 'val_acc': 0.9748, 'test_acc': 0.9788}
+model performance {'train loss': 0.004251718604305384, 'train acc': 0.9986, 'val loss': 0.18480374664885457, 'val acc': 0.9774, 'test acc': 0.9807}
+early stop model performance {'iteration': 6419, 'train_loss': 0.02606180973594839, 'train_acc': 0.9912363636363636, 'val_loss': 0.07902958438768982, 'val_acc': 0.9794, 'test_acc': 0.9809}
+model performance {'train loss': 0.005100594049831587, 'train acc': 0.9986, 'val loss': 0.1850205517916295, 'val acc': 0.978, 'test acc': 0.979}
+early stop model performance {'iteration': 4585, 'train_loss': 0.0384279264678332, 'train_acc': 0.9871272727272727, 'val_loss': 0.09366889325976371, 'val_acc': 0.974, 'test_acc': 0.9776}
+model performance {'train loss': 0.005719267260101383, 'train acc': 0.9984181818181819, 'val loss': 0.1744313974820481, 'val acc': 0.982, 'test acc': 0.983}
+early stop model performance {'iteration': 2751, 'train_loss': 0.07068720445362005, 'train_acc': 0.9781454545454545, 'val_loss': 0.08715106666386127, 'val_acc': 0.9732, 'test_acc': 0.9761}
+model performance {'train loss': 0.006673159564847574, 'train acc': 0.9984181818181819, 'val loss': 0.18480629185267644, 'val acc': 0.9804, 'test acc': 0.9819}
+early stop model performance {'iteration': 2751, 'train_loss': 0.06881020275544036, 'train_acc': 0.9784909090909091, 'val_loss': 0.09154715720564127, 'val_acc': 0.9722, 'test_acc': 0.9739}
+model performance {'train loss': 0.015662553229685662, 'train acc': 0.9948181818181818, 'val loss': 0.09677965494431555, 'val acc': 0.9786, 'test acc': 0.98}
+early stop model performance {'iteration': 4585, 'train_loss': 0.037457858839834275, 'train_acc': 0.9881090909090909, 'val_loss': 0.08398205879479646, 'val_acc': 0.9762, 'test_acc': 0.9783}
+model performance {'train loss': 0.016679840601756323, 'train acc': 0.9943090909090909, 'val loss': 0.11390294668693095, 'val acc': 0.975, 'test acc': 0.9795}
+early stop model performance {'iteration': 6419, 'train_loss': 0.025667250257239423, 'train_acc': 0.9916727272727273, 'val_loss': 0.09038451995179057, 'val_acc': 0.9774, 'test_acc': 0.9764}
+model performance {'train loss': 0.007697994742069436, 'train acc': 0.9974727272727273, 'val loss': 0.11758698418923887, 'val acc': 0.9798, 'test acc': 0.9781}
+early stop model performance {'iteration': 8253, 'train_loss': 0.01793424568271095, 'train_acc': 0.9942363636363636, 'val_loss': 0.08505678703598678, 'val_acc': 0.9784, 'test_acc': 0.9795}
+model performance {'train loss': 0.007989241161595254, 'train acc': 0.9974909090909091, 'val loss': 0.136748408487346, 'val acc': 0.9784, 'test acc': 0.9813}
+early stop model performance {'iteration': 4585, 'train_loss': 0.037981980354406614, 'train_acc': 0.9875454545454545, 'val_loss': 0.09275322039574385, 'val_acc': 0.9728, 'test_acc': 0.9793}
+model performance {'train loss': 0.005200194909585539, 'train acc': 0.9985272727272727, 'val loss': 0.15341002148994104, 'val acc': 0.9818, 'test acc': 0.9817}
+early stop model performance {'iteration': 6419, 'train_loss': 0.024924616540849886, 'train_acc': 0.9916727272727273, 'val_loss': 0.08957478890269994, 'val_acc': 0.9782, 'test_acc': 0.979}
+model performance {'train loss': 0.003935120610728258, 'train acc': 0.9989454545454546, 'val loss': 0.2039059579967223, 'val acc': 0.977, 'test acc': 0.98}
+early stop model performance {'iteration': 4585, 'train_loss': 0.03580365456654267, 'train_acc': 0.9887636363636364, 'val_loss': 0.08903411192893981, 'val_acc': 0.9766, 'test_acc': 0.9769}
+model performance {'train loss': 0.00480801963973948, 'train acc': 0.9986727272727273, 'val loss': 0.23759391921360165, 'val acc': 0.9768, 'test acc': 0.9833}
+early stop model performance {'iteration': 4585, 'train_loss': 0.039562255163897164, 'train_acc': 0.9874, 'val_loss': 0.09426371619105339, 'val_acc': 0.9738, 'test_acc': 0.9774}
+model performance {'train loss': 0.0042425408316839035, 'train acc': 0.9988363636363636, 'val loss': 0.22224591910729133, 'val acc': 0.9792, 'test acc': 0.9804}
+early stop model performance {'iteration': 2751, 'train_loss': 0.0679789780614051, 'train_acc': 0.9788, 'val_loss': 0.09080690668597817, 'val_acc': 0.9742, 'test_acc': 0.9775}
+done running

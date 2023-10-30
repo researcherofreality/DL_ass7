@@ -13,6 +13,9 @@ import torch.nn.utils.prune as prune
 # -----------------------------------------------------------------------------
 
 def get_dataset(name, dir, batch_size = 60, shuffle = True, download = False):
+    if not (os.path.exists(dir)):
+        os.makedirs(dir)
+    
     if name == 'fashionmnist':
         return get_fashionmnist(dir, batch_size, shuffle, download)
     elif name == 'mnist':
@@ -116,6 +119,8 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
         net.train()
         for i, (X, y) in enumerate(data['train']):
             iteration_count += 1
+            if iteration_count % 10000 == 0:
+                print('10k iters')
             X, y = X.to(device), y.to(device, torch.long)
             y_hat = net(X)
             l = loss(y_hat, y)
@@ -138,13 +143,14 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
             avg_val_loss = metric['val'][0] / metric['val'][2]
             if avg_val_loss < best_val_loss and epoch > 0:
                 best_val_loss = avg_val_loss
-                early_stopping = epoch
+                early_stopping = iteration_count
                 
                 early_stop_values = {'iteration': iteration_count, 'train_loss': metric['train'][0] / metric['train'][2], 'train_acc': metric['train'][1] / metric['train'][2], 'val_loss': avg_val_loss,'val_acc': metric['val'][1] / metric['val'][2],'test_acc': 0 }
                 torch.save(net, f'{cp_path}/model_{net.arch}-earlystop_iter_{early_stopping}-{file_specifier}.pth')
-            
+                
             if plot:
                 animator.add(epoch, (metric['train'][0] / metric['train'][2], metric['train'][1] / metric['train'][2], metric['val'][0] / metric['val'][2], metric['val'][1] / metric['val'][2]))
+            
     
     torch.save(net, f'{cp_path}/model_{net.arch}-after-{file_specifier}.pth')
 
@@ -185,14 +191,6 @@ def L1_prune(net,fraction):
 
     return mask
 
-def prune_using_mask(net,mask):
-    i = 0
-    for j, layer in enumerate(net.net):
-        if isinstance(layer, nn.Linear):
-            prune.custom_from_mask(layer, 'weight', mask[i].weight_mask)
-            i += 1
-    return net
-
 def random_prune(net,fraction):
     mask = []
     for i, layer in enumerate(net.net):
@@ -207,6 +205,17 @@ def random_prune(net,fraction):
             
     return mask
 
+def prune_using_mask(net,mask):
+    i = 0
+    for j, layer in enumerate(net.net):
+        if isinstance(layer, nn.Linear):
+            prune.custom_from_mask(layer, 'weight', mask[i].weight_mask)
+            i += 1
+
+    for name, module in net.named_modules():
+        if isinstance(module, nn.Linear):
+            prune.remove(module, 'weight') 
+    return net
 
 # -----------------------------------------------------------------------------
 # Other

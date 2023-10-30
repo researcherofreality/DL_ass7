@@ -5,15 +5,15 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=1
-#SBATCH --time=10:00:00
+#SBATCH --time=12:00:00
 #SBATCH --output=./output/%J.out
 #SBATCH --error=./error/%J.err
 #only use this if you want to send the mail to another team member #SBATCH --mail-user=teammember
 #SBATCH --mail-type=BEGIN,END,FAIL
 
-#### notes
+echo "start run" 
 
-# execute train CLI
-#source "$project_dir"/venv/bin/activate
-#python "$project_dir"/cli_train.py \
+source "/scratch/IMC070_deeplearning/venv/bin/activate"
+python3 LTH_fig1.py
 
+echo "done running"
