@@ -101,8 +101,9 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
     if not (os.path.exists(cp_path)):
         os.makedirs(cp_path)
     
-    
+    early_stopping = None
     best_val_loss = float('inf')
+    
     net.to(device)
     loss = nn.CrossEntropyLoss()    
     torch.save(net, f'{cp_path}/model_{net.arch}-before-{file_specifier}.pth')
@@ -143,8 +144,11 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
             avg_val_loss = metric['val'][0] / metric['val'][2]
             if avg_val_loss < best_val_loss and epoch > 0:
                 best_val_loss = avg_val_loss
-                early_stopping = iteration_count
                 
+                if os.path.exists(f'{cp_path}/model_{net.arch}-earlystop_iter_{early_stopping}-{file_specifier}.pth') and early_stopping is not None:
+                    os.remove(f'{cp_path}/model_{net.arch}-earlystop_iter_{early_stopping}-{file_specifier}.pth')
+                
+                early_stopping = iteration_count
                 early_stop_values = {'iteration': iteration_count, 'train_loss': metric['train'][0] / metric['train'][2], 'train_acc': metric['train'][1] / metric['train'][2], 'val_loss': avg_val_loss,'val_acc': metric['val'][1] / metric['val'][2],'test_acc': 0 }
                 torch.save(net, f'{cp_path}/model_{net.arch}-earlystop_iter_{early_stopping}-{file_specifier}.pth')
                 
