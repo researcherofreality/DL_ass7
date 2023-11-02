@@ -1,0 +1,29 @@
+
+
+###############################################################################
+Science Cluster
+Job 2541854 for user 'vpjanovic'
+Finished at: Thu Nov  2 20:25:53 CET 2023
+
+Job details:
+============
+
+Name                : LTH_fig1.sh
+User                : vpjanovic
+Partition           : csedu
+Nodes               : cn47
+Cores               : 2
+State               : COMPLETED
+Submit              : 2023-11-02T14:53:03
+Start               : 2023-11-02T14:53:04
+End                 : 2023-11-02T20:25:53
+Reserved walltime   : 12:00:00
+Used walltime       : 05:32:49
+Used CPU time       : 05:34:59 (efficiency: 50.33%)
+% User (Computation): 99.73%
+% System (I/O)      :  0.27%
+Mem reserved        : 10G
+Max Mem used        : 1.17G (cn47)
+Max Disk Write      : 0.00  (cn47)
+Max Disk Read       : 10.24K (cn47)
+

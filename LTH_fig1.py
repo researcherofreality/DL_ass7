@@ -15,8 +15,9 @@ if not os.path.exists('results'):
 
 device = d2l.try_gpu()
 dataset_used = get_dataset('mnist', dir = './data', batch_size = 60, shuffle = True, download = False)
-L1_size, random_size = 5, 10
 
+
+L1_size, random_size = 5, 10
 remaining_percentages = np.array([100, 70, 41.1, 16.9, 7.0, 2.9, 1.2, 0.5, 0.2])
 prune_fractions = (100-remaining_percentages)/100
 
@@ -35,9 +36,14 @@ _, early_stop_values = train(net, optimizer, dataset_used, epochs = 50, file_spe
 for j in range(L1_size):
     for i, fraction in enumerate(prune_fractions):
         trained_net = torch.load("./checkpoints/model_LeNet-after-LTH_fig1_base.pth")
-        mask = L1_prune(trained_net, fraction)
+        net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
+        net.state_dict(trained_net.state_dict())
+        mask = L1_prune(net, fraction)
+        
         init_net = torch.load("./checkpoints/model_LeNet-before-LTH_fig1_base.pth")
-        init_net_pruned = prune_using_mask(init_net, mask)
+        net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
+        net.state_dict(init_net.state_dict())
+        init_net_pruned = prune_using_mask(net, mask)
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_L1_pruned{fraction}', val_interval = 2, plot = False)
         
@@ -54,11 +60,16 @@ print('start random')
 for j in range(random_size):
     for i, fraction in enumerate(prune_fractions):
         trained_net = torch.load("./checkpoints/model_LeNet-after-LTH_fig1_base.pth")
-        mask = random_prune(trained_net, fraction)
-        init_net = torch.load("./checkpoints/model_LeNet-before-LTH_fig1_base.pth")
-        init_net_pruned = prune_using_mask(init_net, mask)
+        net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
+        net.state_dict(trained_net.state_dict())
+        mask = random_prune(net, fraction)
         
-        _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_random_pruned{fraction}', val_interval = 2, plot = True)
+        init_net = torch.load("./checkpoints/model_LeNet-before-LTH_fig1_base.pth")
+        net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
+        net.state_dict(init_net.state_dict())
+        init_net_pruned = prune_using_mask(net, mask)
+        
+        _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_random_pruned{fraction}', val_interval = 2, plot = False)
         
         early_stop_iterations_lenet_random[i,j] = early_stop_values['iteration']
         early_stop_testacc_lenet_random[i,j] = early_stop_values['test_acc']    

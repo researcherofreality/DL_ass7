@@ -106,6 +106,7 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
     
     net.to(device)
     loss = nn.CrossEntropyLoss()    
+    
     torch.save(net, f'{cp_path}/model_{net.arch}-before-{file_specifier}.pth')
     
     if plot:
@@ -187,11 +188,11 @@ def L1_prune(net,fraction):
         
         if i == len(net.net):
             if isinstance(layer,nn.Linear):
-                mask.append(prune.l1_unstructured(layer, name='weight', amount=0.1))
+                mask.append(prune.l1_unstructured(layer, name='weight', amount=fraction/2))
             break
         
         if isinstance(layer,nn.Linear):
-            mask.append(prune.l1_unstructured(layer, name='weight', amount=0.2))
+            mask.append(prune.l1_unstructured(layer, name='weight', amount=fraction))
 
     return mask
 
@@ -201,11 +202,11 @@ def random_prune(net,fraction):
         
         if i == len(net.net):
             if isinstance(layer,nn.Linear):
-                mask.append(prune.random_unstructured(layer, name='weight', amount=0.1))
+                mask.append(prune.random_unstructured(layer, name='weight', amount=fraction/2))
             break
         
         if isinstance(layer,nn.Linear):
-            mask.append(prune.random_unstructured(layer, name='weight', amount=0.2))
+            mask.append(prune.random_unstructured(layer, name='weight', amount=fraction))
             
     return mask
 
