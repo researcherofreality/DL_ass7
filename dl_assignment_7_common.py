@@ -12,7 +12,21 @@ import torch.nn.utils.prune as prune
 # Datasets
 # -----------------------------------------------------------------------------
 
-def get_dataset(name, dir, batch_size = 60, shuffle = True, download = False):
+def get_dataset(name, dir, batch_size=60, shuffle=True, download=False):
+    """
+    Returns a PyTorch dataset object for the specified dataset name.
+
+    Args:
+        name (str): Name of the dataset. Currently supported options are 'fashionmnist' and 'mnist'.
+        dir (str): Directory to store the downloaded dataset.
+        batch_size (int, optional): Batch size for the data loader. Defaults to 60.
+        shuffle (bool, optional): Whether to shuffle the data. Defaults to True.
+        download (bool, optional): Whether to download the dataset if it is not already present. Defaults to False.
+
+    Returns:
+        torch.utils.data.Dataset: PyTorch dataset object for the specified dataset.
+    """
+    
     if not (os.path.exists(dir)):
         os.makedirs(dir)
     
@@ -121,13 +135,16 @@ def train(net, optimizer, data, epochs, file_specifier = '', device = d2l.try_gp
         net.train()
         for i, (X, y) in enumerate(data['train']):
             iteration_count += 1
-            if iteration_count % 10000 == 0:
-                print('10k iters')
             X, y = X.to(device), y.to(device, torch.long)
             y_hat = net(X)
             l = loss(y_hat, y)
             optimizer.zero_grad()
             l.backward()
+            
+            for name, param in net.named_parameters():
+                if 'weight' in name: 
+                    param.grad.data *= param.data.ne(0).float()
+        
             optimizer.step()
             metric['train'].add(l * X.shape[0], d2l.accuracy(y_hat, y), X.shape[0])
             
@@ -220,6 +237,10 @@ def prune_using_mask(net,mask):
     for name, module in net.named_modules():
         if isinstance(module, nn.Linear):
             prune.remove(module, 'weight') 
+            
+            # with torch.no_grad():
+            #     module.weight[module.weight == 0] = 0  # Ensure pruned weights are zero
+            # module.weight.requires_grad = False  # Prevent pruned weights from updating
     return net
 
 # -----------------------------------------------------------------------------

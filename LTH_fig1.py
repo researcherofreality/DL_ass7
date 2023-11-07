@@ -44,6 +44,7 @@ for j in range(L1_size):
         net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
         net.state_dict(init_net.state_dict())
         init_net_pruned = prune_using_mask(net, mask)
+        optimizer = torch.optim.Adam(init_net_pruned.parameters(), lr=0.0012)
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_L1_pruned{fraction}', val_interval = 2, plot = False)
         
@@ -68,6 +69,7 @@ for j in range(random_size):
         net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
         net.state_dict(init_net.state_dict())
         init_net_pruned = prune_using_mask(net, mask)
+        optimizer = torch.optim.Adam(init_net_pruned.parameters(), lr=0.0012)
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_random_pruned{fraction}', val_interval = 2, plot = False)
         
