@@ -10,7 +10,7 @@ import torch.nn.utils.prune as prune
 
 print('start')
 
-run_name = 'large'
+run_name = 'base'
 cp_path = f'./checkpoints/{run_name}'
 
 if not os.path.exists(cp_path):
@@ -24,11 +24,13 @@ device = d2l.try_gpu()
 dataset_used = get_dataset('mnist', dir = './data', batch_size = 60, shuffle = True, download = False)
 
 L1_size, random_size = 5, 10
-remaining_percentages = np.array([100, 90, 80, 70, 60, 50, 40, 30, 20, 15, 12, 10, 9.0]) 
+remaining_percentages = np.array([ 2, 1, 0.7, 0.5, 0.2])
+
 prune_fractions = (100-remaining_percentages)/100
 
-epochs_random = [10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20]
-epochs_L1 = [10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20]
+epochs_random = [ 50, 50, 50, 50, 50]
+
+epochs_L1 = [ 50, 50, 50, 50, 50]
 
 early_stop_iterations_lenet_L1 = np.zeros([len(prune_fractions),L1_size])
 early_stop_iterations_lenet_L1 = np.insert(early_stop_iterations_lenet_L1, 0, prune_fractions, axis=1)

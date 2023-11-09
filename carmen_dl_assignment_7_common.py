@@ -373,8 +373,7 @@ def train_iterative(net, optimizer, data, epochs, file_specifier = '', device = 
     
     print('early stop model performance', early_stop_values)
     
-    #return model_performance, early_stop_values
-    return net
+    return model_performance, early_stop_values
 
 # -----------------------------------------------------------------------------
 # Pruning

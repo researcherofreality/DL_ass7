@@ -14,6 +14,6 @@
 echo "start run" 
 
 source "/scratch/IMC070_deeplearning/venv/bin/activate"
-python3 LTH_fig1.py
+python3 LTH_fig4a_iterative_winning.py
 
 echo "done running"
