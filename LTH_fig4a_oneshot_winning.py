@@ -24,11 +24,10 @@ if not os.path.exists(result_path):
 device = d2l.try_gpu()
 dataset_used = get_dataset('mnist', dir = './data', batch_size = 60, shuffle = True, download = False)
 
-runs = 5
-remaining_percentages = np.array([100, 90, 80, 70, 60, 50, 40, 30, 20, 15, 12, 10, 9.0]) 
+runs = 3
+remaining_percentages = np.array([100, 70, 50, 15, 10, 7,  4, 3.5, 2, 1, 0.5,])
+epochs                =          [16, 16, 16, 16, 16, 18, 24, 24, 36, 40, 46]
 prune_fractions = (100-remaining_percentages)/100
-
-epochs = [10, 10, 10, 10, 10, 10, 10, 20, 20, 20, 20, 20, 20]
 
 early_stop_iterations = np.zeros([len(prune_fractions),runs])
 early_stop_iterations = np.insert(early_stop_iterations, 0, prune_fractions, axis=1)
@@ -39,10 +38,11 @@ early_stop_trainacc = np.insert(early_stop_trainacc, 0, prune_fractions, axis=1)
 early_stop_testacc = np.zeros([len(prune_fractions),runs])
 early_stop_testacc = np.insert(early_stop_testacc, 0, prune_fractions, axis=1)
 
+net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
+_, early_stop_values = train(net, optimizer, dataset_used, epochs = 10, file_specifier = f'LTH_fig4a_base', val_interval = 2, cp_path=cp_path , plot = False)
+
 for j in range(runs):
     for i, fraction in enumerate(prune_fractions):
-        net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
-        _, early_stop_values = train(net, optimizer, dataset_used, epochs = 10, file_specifier = f'LTH_fig4a_base', val_interval = 2, cp_path=cp_path , plot = False)
         
         print(f'run {j} for fraction {fraction}')
         trained_net = torch.load(f"{cp_path}/model_LeNet-after-LTH_fig4a_base.pth")
@@ -58,9 +58,9 @@ for j in range(runs):
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs[i], file_specifier = f'LTH_4a_L1_pruned{fraction}', val_interval = 2, cp_path=cp_path , plot = False)
         
-        early_stop_iterations[i+1,j] = early_stop_values['iteration']
-        early_stop_trainacc[i+1,j] = early_stop_values['train_acc']
-        early_stop_testacc[i+1,j] = early_stop_values['test_acc']    
+        early_stop_iterations[i,j+1] = early_stop_values['iteration']
+        early_stop_trainacc[i,j+1] = early_stop_values['train_acc']
+        early_stop_testacc[i,j+1] = early_stop_values['test_acc']    
         
 np.savetxt(f'{result_path}/early_stop_iterations_{run_name}.txt',early_stop_iterations)
 np.savetxt(f'{result_path}/early_stop_trainacc_{run_name}.txt',early_stop_trainacc)

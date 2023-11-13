@@ -10,7 +10,7 @@ import torch.nn.utils.prune as prune
 
 print('start')
 
-run_name = 'mini'
+run_name = 'large'
 cp_path = f'./checkpoints/{run_name}'
 
 if not os.path.exists(cp_path):
@@ -24,13 +24,13 @@ device = d2l.try_gpu()
 dataset_used = get_dataset('mnist', dir = './data', batch_size = 60, shuffle = True, download = False)
 
 L1_size, random_size = 5, 10
-remaining_percentages = np.array([ 2, 1, 0.7, 0.5, 0.2])
+remaining_percentages = np.array([100,90,80,70,60,50,40,30,20,10])
 
 prune_fractions = (100-remaining_percentages)/100
 
-epochs_random = [ 50, 50, 50, 50, 50]
+epochs_random = [ 10,10,10,10,10,10,10,20,20,20]
 
-epochs_L1 = [ 50, 50, 50, 50, 50]
+epochs_L1 = [ 10,10,10,10,10,10,10,20,20,20]
 
 early_stop_iterations_lenet_L1 = np.zeros([len(prune_fractions),L1_size])
 early_stop_iterations_lenet_L1 = np.insert(early_stop_iterations_lenet_L1, 0, prune_fractions, axis=1)
@@ -46,7 +46,7 @@ early_stop_testacc_lenet_random = np.insert(early_stop_testacc_lenet_random, 0, 
 
 
 net, optimizer = create_network(arch = 'LeNet', input = 784, output = 10)
-_, early_stop_values = train(net, optimizer, dataset_used, epochs = 50, file_specifier = f'LTH_fig1_base', val_interval = 2,cp_path=cp_path, plot = False)
+_, early_stop_values = train(net, optimizer, dataset_used, epochs = 50, file_specifier = f'LTH_fig1_base', val_interval = 2, cp_path = cp_path ,plot = False)
 
 for j in range(L1_size):
     for i, fraction in enumerate(prune_fractions):
@@ -67,6 +67,7 @@ for j in range(L1_size):
         
         early_stop_iterations_lenet_L1[i,j+1] = early_stop_values['iteration']
         early_stop_testacc_lenet_L1[i,j+1] = early_stop_values['test_acc']    
+
 
 np.savetxt(f'{result_path}/early_stop_iterations_lenet_L1_{run_name}.txt',early_stop_iterations_lenet_L1)
 np.savetxt(f'{result_path}/early_stop_testacc_lenet_L1_{run_name}.txt',early_stop_testacc_lenet_L1)

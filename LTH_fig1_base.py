@@ -67,8 +67,8 @@ for j in range(L1_size):
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_L1_pruned{fraction}', val_interval = 2, cp_path=cp_path , plot = False)
         
-        early_stop_iterations_lenet_L1[i+1,j] = early_stop_values['iteration']
-        early_stop_testacc_lenet_L1[i+1,j] = early_stop_values['test_acc']    
+        early_stop_iterations_lenet_L1[i,j+1] = early_stop_values['iteration']
+        early_stop_testacc_lenet_L1[i,j+1] = early_stop_values['test_acc']    
 
 early_stop_iterations_lenet_L1_avg = np.mean(early_stop_iterations_lenet_L1[:,1:],axis=1)
 early_stop_testacc_lenet_L1_avg = np.mean(early_stop_testacc_lenet_L1[:,1:],axis=1)
@@ -96,8 +96,8 @@ for j in range(random_size):
         
         _, early_stop_values = train(init_net_pruned, optimizer, dataset_used, epochs = epochs_L1[i], file_specifier = f'LTH_random_pruned{fraction}', val_interval = 2, cp_path=cp_path , plot = False)
         
-        early_stop_iterations_lenet_random[i+1,j] = early_stop_values['iteration']
-        early_stop_testacc_lenet_random[i+1,j] = early_stop_values['test_acc']    
+        early_stop_iterations_lenet_random[i,j+1] = early_stop_values['iteration']
+        early_stop_testacc_lenet_random[i,j+1] = early_stop_values['test_acc']    
 
 early_stop_iterations_lenet_random_avg = np.mean(early_stop_iterations_lenet_random[:,1:],axis=1)
 early_stop_testacc_lenet_random_avg = np.mean(early_stop_testacc_lenet_random[:,1:],axis=1)
