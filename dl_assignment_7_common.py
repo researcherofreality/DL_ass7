@@ -440,7 +440,7 @@ def L1_prune(net, fraction):
 
 def iterative_L1_prune(net, fraction, round_number):
     """
-    Applies L1 unstructured pruning to the weights of the linear layers in the given network.
+    Applies L1 unstructured pruning in an iterative fashion to the weights of the linear layers in the given network.
 
     Args:
         -  net (torch.nn.Module): The network to prune.

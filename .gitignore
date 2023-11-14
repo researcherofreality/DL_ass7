@@ -2,5 +2,5 @@ checkpoints/*
 data/*
 *.pdf
 error/*
-results/*
+# results/*
 output/*

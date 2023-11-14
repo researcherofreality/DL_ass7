@@ -68,7 +68,7 @@ for j in range(runs):
             # net.load_state_dict(init_net.state_dict()) # off for random reinit
             pruned_net = prune_using_mask(net, mask)
             optimizer = torch.optim.Adam(pruned_net.parameters(), lr=0.0012)
-            _, early_stop_values = train(pruned_net, optimizer, dataset_used, epochs = 2, file_specifier = f'LTH_4a_L1_pruned{fraction}', val_interval = 2, cp_path=cp_path , plot = False)
+            _, early_stop_values = train(pruned_net, optimizer, dataset_used, epochs = epochs[i], file_specifier = f'LTH_4a_L1_pruned{fraction}', val_interval = 2, cp_path=cp_path , plot = False)
         
         early_stop_iterations[i,j+1] = early_stop_values['iteration']
         early_stop_trainacc[i,j+1] = early_stop_values['train_acc']
